@@ -45,7 +45,7 @@ namespace WebAPI.Controllers
             var clientVersion = OrUnknown(clientMatch?.Version, "client-version");
 
             // var ip = Request.HttpContext.Connection.RemoteIpAddress.ToString(); // This didn't work
-            var ip = HttpContext.Request.Headers["X -Forwarded-For"].ToString();
+            var ip = HttpContext.Request.Headers["X-Forwarded-For"].ToString();
 
             var city = string.Empty;
             if (!string.IsNullOrWhiteSpace(ip))
