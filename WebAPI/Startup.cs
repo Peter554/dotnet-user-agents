@@ -29,7 +29,10 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app
+                .UseMvc()
+                .UseDefaultFiles()
+                .UseStaticFiles();
         }
     }
 }
